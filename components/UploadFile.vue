@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center items-center w-full">
+    <div class="flex justify-center items-center w-full" id="uploadFile">
         <label :id="Date.now()" class="flex flex-col justify-center items-center w-full h-60 bg-[#F5F5F5] rounded-lg border-2 border-gray-300 border-dashed cursor-pointer dark:hover:bg-bray-800 hover:bg-gray-100">
             <div class="flex flex-col justify-center items-center pt-5 pb-6">
                 <svg width="40" class="mb-5" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -7,21 +7,33 @@
                 </svg>
                 <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">{{status}}</span></p>
             </div>
-            <input :id="Date.now()"  type="file" @change="$emit('change',$event)" :accept="isFile ? isFile : ''" class="hidden">
+            <input :id="Date.now()"  type="file" ref="file" @change="uploadFile" :accept="isFile ? isFile : ''" class="hidden">
         </label>
     </div>
 </template>
+<script src="https://rawgit.com/vuejs/vue/dev/dist/vue.js"></script>
 <script>
 export default{
     props:['img','isFile'],
-computed:{
-    status(){
-        if(this.img){
-            return 'Загружено';
-        }else{
-            return 'Загрузить';
+    computed:{
+        status(){
+            if(this.img){
+                return 'Загружено';
+            }else{
+                return 'Загрузить не более 10МБ';
+            }
         }
-    }
-}
+    },
+    methods: {
+        uploadFile(video) {
+            const file = video.target.files[0]
+            console.log(file.size);
+            if(file.size > 10240 * 1024) {
+                alert("Файл больше чем 10МБ")
+            } else {
+                this.$emit('change', file)
+            }
+        }
+  },
 }
 </script>
