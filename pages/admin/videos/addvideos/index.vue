@@ -48,11 +48,11 @@
             <div class="col-span-1">
                 <div class="gap-6 pb-8">
                     <label for="helper-text" class="block mb-2 text-sm font-medium text-[#B3B9C9]">Загрузить фото для видео</label>
-                    <UploadFile :img="photo" @change="(e) => photo = e.target.files[0]" isFile="image/*"/>
+                    <UploadFile :img="photo" @change="(e) => photo = e" isFile="image/*"/>
                 </div>
                 <div class="col-span-1">
                     <label for="helper-text" class="block mb-2 text-sm font-medium text-[#B3B9C9]">Загрузить видео</label>
-                    <UploadFile  :img="video" @change="(e) => video = e.target.files[0]" isFile="video/*"/>
+                    <UploadFile  :img="video" @change="(e) => video = e" isFile="video/*"/>
                 </div>
             </div>
         </div>
