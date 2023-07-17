@@ -12,28 +12,28 @@
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Имя на таджикском<span class="text-red-600">*</span></label>
                             <input type="text" v-model="name_tj" id="helper-text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите имя">
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Имя на русском<span class="text-red-600">*</span></label>
                             <input type="text" v-model="name_ru" id="helper-text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите имя">
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Фамилия на таджикском<span class="text-red-600">*</span></label>
                             <input type="text" v-model="lastname_tj" id="helper-text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите Фамилию">
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Фамилия на русском<span class="text-red-600">*</span></label>
                             <input type="text" v-model="lastname_ru" id="helper-text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите Фамилию">
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
@@ -45,14 +45,14 @@
                             </span>
                             <input type="number" v-model="phone" :minlength="min" :maxlength="max" id="website-admin" class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5" placeholder="Введите Номер телефона">
                             </div>
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
                         <ValidationProvider rules="required" v-slot="{ errors }">
                             <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Электронная почта <span class="text-red-600">*</span></label>
                             <input type="email" v-model="email" id="helper-text" aria-describedby="helper-text-explanation" class="bg-gray-50 border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите электроную почту">
-                                    <p class="text-red-600">{{errors[0]}}</p>
+                                    <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
@@ -63,7 +63,7 @@
                             <option value="Психолог">Равоншинос</option>
                             <option value="Юрист">Ҳуқуқшинос</option>
                             </select>
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">
@@ -74,7 +74,7 @@
                             <option value="Психолог">Психолог</option>
                             <option value="Юрист">Юрист</option>
                             </select>
-                            <p class="text-red-600">{{errors[0]}}</p>
+                            <p class="text-red-600 absolute">{{errors[0]}}</p>
                         </ValidationProvider>
                     </div>
                     <div class="col-span-2">

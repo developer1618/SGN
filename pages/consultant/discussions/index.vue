@@ -10,7 +10,7 @@
                     <!-- <span class="bg-[#727ABE] rounded-full text-white px-[10px] py-[3px] mx-2">1</span> -->
                 </div>
             </div>
-            <div class="absolute bottom-0 left-96 pb-7" @click="isDiscussion = true">
+            <div class="absolute bottom-0 left-[27rem] pb-7" @click="isDiscussion = true">
                 <button class="bg-[#727ABE] text-white pt-1 pr-4 pb-2.5 pl-4 rounded-lg text-3xl font-semibold">+</button>
             </div>
         </div>

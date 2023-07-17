@@ -29,7 +29,7 @@
       <div class="sidebar_user-info pb-16">
         <div>
           <nuxt-link to="/">
-            <h3 class="text-base font-semibold">{{ $auth.user.name_ru }} {{ $auth.user.lastname_ru }}</h3>
+            <h3 class="text-base font-semibold pb-4">{{ $auth.user.name_ru }} {{ $auth.user.lastname_ru }}</h3>
           </nuxt-link>
         </div>
         <div>

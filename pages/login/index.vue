@@ -11,7 +11,7 @@
                   <ValidationObserver v-slot="{handleSubmit}">
                   <form class="space-y-4 md:space-y-6" @submit.prevent="handleSubmit(login)">
                     <ValidationProvider rules="required" v-slot="{ errors }">
-                      <div class="pb-8">
+                      <div class="pb-10">
                           <label for="website-admin" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Номер телефона</label>
                           <div class="flex">
                           <span class="inline-flex items-center px-3 text-sm text-[#4D5D7D]  rounded-l-md border border-r-0 border-gray-300 bg-white">
@@ -19,7 +19,7 @@
                           </span>
                           <input type="number" v-model="phone" id="website-admin" class="rounded-none rounded-r-lg border text-[#4D5D7D] block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5 bg-white" placeholder="Введите Номер телефона">
                           </div>
-                          <p class="text-red-600 pt-2">{{errors[0]}}</p>
+                          <p class="text-red-600 pt-2 absolute">{{errors[0]}}</p>
                       </div>
                     </ValidationProvider>
 
@@ -31,17 +31,14 @@
                             <img src="/img/eye-pass-on.svg" v-if="typePassword" @click="typePassword = !typePassword" alt="on" class="cursor-pointer">
                             <img src="/img/eye-pass-off.svg" v-else alt="off" @click="typePassword = !typePassword" class="cursor-pointer">
                           </div>
-                          <p class="text-red-600 pt-4 pb-4 absolute">{{errors[0]}}</p>
-                          <p class="text-red-600 pt-4 pb-4 absolute" v-if="error">Неверный логин или пароль!</p>
+                          <p class="text-red-600 pt-2 pb-2 absolute">{{errors[0]}}</p>
+                          <p class="text-red-600 pt-2 pb-2 absolute" v-if="error">Неверный логин или пароль!</p>
                       </div>
                       </ValidationProvider>
-                      <div class="flex items-center justify-between pt-6">
+                      <div class="flex items-center justify-between pt-4">
                           <div class="flex">
 
                           </div>
-                          <!-- <div class="flex">
-                            <a href="#" class="text-sm font-medium text-[#B3B9C9] hover:underline">Забыли пароль ?</a>
-                          </div> -->
                       </div>
                       <button type="submit" class="w-full h-12 text-white bg-[#727ABE] hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">Войти</button>
                   </form>

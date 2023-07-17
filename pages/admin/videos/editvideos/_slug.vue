@@ -13,28 +13,28 @@
                             <ValidationProvider rules="required" v-slot="{ errors }">
                                 <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Название на таджикском<span class="text-red-600">*</span></label>
                                 <input type="text" v-model="name_tj" id="helper-text" aria-describedby="helper-text-explanation" class="bg-white border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите название">
-                                <p class="text-red-600">{{errors[0]}}</p>
+                                <p class="text-red-600 absolute">{{errors[0]}}</p>
                             </ValidationProvider>
                         </div>
                         <div class="col-span-1">
                             <ValidationProvider rules="required" v-slot="{ errors }">
                                 <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Название на русском<span class="text-red-600">*</span></label>
                                 <input type="text" v-model="name_ru" id="helper-text" aria-describedby="helper-text-explanation" class="bg-white border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500" placeholder="Введите название">
-                                <p class="text-red-600">{{errors[0]}}</p>
+                                <p class="text-red-600 absolute">{{errors[0]}}</p>
                             </ValidationProvider>
                         </div>
                         <div class="col-span-1">
                             <ValidationProvider rules="required" v-slot="{ errors }">
                                 <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Описание на таджикском<span class="text-red-600">*</span></label>
                                 <textarea id="message" v-model="description_tj" rows="8" class="block p-2.5 w-full text-sm text-[#4D5D7D] bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  placeholder-gray-400 text-white" placeholder="Введите описание..."></textarea>
-                                <p class="text-red-600">{{errors[0]}}</p>
+                                <p class="text-red-600 absolute">{{errors[0]}}</p>
                             </ValidationProvider>
                         </div>
                         <div class="col-span-1">
                             <ValidationProvider rules="required" v-slot="{ errors }">
                                 <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Описание на русском<span class="text-red-600">*</span></label>
                                 <textarea id="message" v-model="description_ru" rows="8" class="block p-2.5 w-full text-sm text-[#4D5D7D] bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  placeholder-gray-400 text-white" placeholder="Введите описание..."></textarea>
-                                <p class="text-red-600">{{errors[0]}}</p>
+                                <p class="text-red-600 absolute">{{errors[0]}}</p>
                             </ValidationProvider>
                         </div>
                         <div class="col-span-1">

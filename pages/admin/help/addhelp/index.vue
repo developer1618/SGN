@@ -16,7 +16,7 @@
                                         aria-describedby="helper-text-explanation"
                                         class="bg-white border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                                         placeholder="Введите Название центра">
-                                        <p class="text-red-600">{{errors[0]}}</p>
+                                        <p class="text-red-600 absolute">{{errors[0]}}</p>
                                 </ValidationProvider>
                             </div>
                             <div class="col-span-1">
@@ -26,7 +26,7 @@
                                         aria-describedby="helper-text-explanation"
                                         class="bg-white border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                                         placeholder="Введите Название центра">
-                                        <p class="text-red-600">{{errors[0]}}</p>
+                                        <p class="text-red-600 absolute">{{errors[0]}}</p>
                                 </ValidationProvider>
                             </div>
                             <div class="col-span-1">
@@ -42,7 +42,7 @@
                                             class="rounded-none rounded-r-lg border text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 w-full text-sm border-gray-300 p-2.5"
                                             placeholder="Введите Номер телефона">
                                     </div>
-                                    <p class="text-red-600">{{errors[0]}}</p>
+                                    <p class="text-red-600 absolute">{{errors[0]}}</p>
                                 </ValidationProvider>
                             </div>
                             <div class="col-span-1">
@@ -55,7 +55,7 @@
                                             {{ cityList.name_ru }}
                                         </option>
                                     </select>
-                                    <p class="text-red-600">{{errors[0]}}</p>
+                                    <p class="text-red-600 absolute">{{errors[0]}}</p>
                                 </ValidationProvider>
                             </div>
                             <div class="col-span-1">
@@ -65,7 +65,7 @@
                                         aria-describedby="helper-text-explanation"
                                         class="bg-white border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                                         placeholder="Введите Адрес">
-                                    <p class="text-red-600">{{errors[0]}}</p>
+                                    <p class="text-red-600 absolute">{{errors[0]}}</p>
                                 </ValidationProvider>
                             </div>
                             <div class="col-span-1">
@@ -75,7 +75,7 @@
                                         aria-describedby="helper-text-explanation"
                                         class="bg-white border border-gray-300 text-sm rounded-lg block w-full p-2.5 placeholder-[#B3B9C9] text-[#4D5D7D] focus:ring-blue-500 focus:border-blue-500"
                                         placeholder="Введите Адрес">
-                                    <p class="text-red-600">{{errors[0]}}</p>
+                                    <p class="text-red-600 absolute">{{errors[0]}}</p>
                                 </ValidationProvider>
                             </div>
                             <div class="col-span-1">

@@ -50,7 +50,7 @@
                     <div class="col-span-6 pt-4">
                         <nuxt-link to="/admin/employees" type="button" class="text-[#4D5D7D] hover:bg-white border border-[#727ABE] text-[#727ABE] focus:outline-none focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2">Отменить</nuxt-link>
                         <button type="submit" class="text-white bg-[#727ABE] hover:bg-[#5a6097] font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2  focus:outline-none">Сохранить</button>
-                        <p id="send-validate" class="text-red-600 pt-2" v-if="toast.open">{{toast.text}}</p>
+                        <p id="send-validate" class="text-red-600 pt-2 absolute" v-if="toast.open">{{toast.text}}</p>
                     </div>
                 </form>
             </ValidationObserver>
