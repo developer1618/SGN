@@ -2,9 +2,9 @@
     <div class="flex chat w-full">
         <div class="messages w-72 bg-white overflow-y-auto">
             <h2 class="text-[28px] text-[#1F2328] font-semibold mb-5 mt-10 mx-4">Сообщения</h2>
-            <div  class="bg-[#F8F8FB] px-4 py-3 mx-4 rounded-lg hover:bg-[#E5E7EC] mb-4 cursor-pointer whitespace-nowrap flex justify-between items-center" v-for="user in groups" @click="getChat(user.id)">
-                <p class="text-sm text-[#1F2328] font-medium">{{user.user.name}} {{user.user.lastname}}</p>
-                <!-- <span v-if="user.user1_read === 1" class="bg-[#727ABE] rounded-full text-white px-[10px] py-[3px] mx-2">1</span> -->
+            <div  class="bg-[#F8F8FB] p-4 mx-4 mb-4 rounded-lg hover:bg-[#E5E7EC] cursor-pointer whitespace-nowrap flex justify-between items-center" v-for="user in groups" @click="getChat(user.id)">
+                <div class="text-sm text-[#1F2328] font-medium">{{user.user.name_ru}} {{user.user.lastname_ru}}</div>
+                <span v-if="user.user1_read === 1" class="bg-[#727ABE] rounded-full text-white px-[10px] py-[3px] mx-2">1</span>
             </div>
         </div>
         <div class="consultations w-full relative justify-center items-end pb-7 mt-20">
@@ -12,7 +12,7 @@
                 <div class="h-4"></div>
                 <div v-for="chat in chats">
                     <div class="admin-messages flex justify-end pb-2"  v-if="(chat?.user_id === $auth.user.id)">
-                        <p class="bg-[#727ABE] text-white p-2 p-2 text-center rounded-[16px] max-w-md">{{chat.body}}</p>
+                        <div class="bg-[#727ABE] text-white p-2 p-2 text-center rounded-[16px] max-w-md">{{chat.body}}</div>
                     </div>
                     <div class="user-messages flex justify-start pb-6"  v-else>
                         <p class="bg-[#ebebeb] text-[#1F2328] px-3 py-2.5 text-center rounded-[16px] max-w-md">{{chat.body}}</p>

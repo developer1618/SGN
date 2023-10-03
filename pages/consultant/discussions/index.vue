@@ -5,12 +5,12 @@
         <div class="messages w-72 bg-white overflow-y-auto">
             <div class="whitespace-nowrap">
                 <h2 class="text-[28px] text-[#1F2328] font-semibold mb-5 mt-10 mx-4">Сообщения</h2>
-                <div  class="bg-[#F8F8FB] px-4 py-3 mx-4 rounded-lg hover:bg-[#E5E7EC] mb-4 cursor-pointer whitespace-nowrap flex justify-between items-center" v-for="(discussion, index) in discussions" :key="index" @click="getSingleDiscussion(discussion.id)">
+                <div  class="bg-[#F8F8FB] p-4 mx-4 mb-4 rounded-lg hover:bg-[#E5E7EC] cursor-pointer whitespace-nowrap flex justify-between items-center" v-for="(discussion, index) in discussions" :key="index" @click="getSingleDiscussion(discussion.id)">
                     <p class="text-sm text-[#1F2328] font-medium">{{discussion.name_ru}}</p>
                     <!-- <span class="bg-[#727ABE] rounded-full text-white px-[10px] py-[3px] mx-2">1</span> -->
                 </div>
             </div>
-            <div class="absolute bottom-0 left-[27rem] pb-7" @click="isDiscussion = true">
+            <div class="absolute bottom-0 left-[25rem] pb-7" @click="isDiscussion = true">
                 <button class="bg-[#727ABE] text-white pt-1 pr-4 pb-2.5 pl-4 rounded-lg text-3xl font-semibold">+</button>
             </div>
         </div>

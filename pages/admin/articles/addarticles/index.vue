@@ -26,20 +26,20 @@
                         <div class="col-span-1">
                             <ValidationProvider rules="required" v-slot="{ errors }">
                                 <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Описание на таджикском <span class="text-red-600">*</span></label>
-                                <!-- <client-only>
+                                <client-only>
                                     <VueEditor  v-model="description_tj"/>
-                                </client-only> -->
-                                <textarea name="" id="" rows="10" v-model="description_tj" class="w-full"></textarea>
+                                </client-only>
+                                <!-- <textarea name="" id="" rows="10" v-model="description_tj" class="w-full"></textarea> -->
                                 <p class="text-red-600 absolute">{{errors[0]}}</p>
                             </ValidationProvider>
                         </div>
                         <div class="col-span-1">
                             <ValidationProvider rules="required" v-slot="{ errors }">
                                 <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Описание на русском <span class="text-red-600">*</span></label>
-                                <!-- <client-only>
+                                <client-only>
                                     <VueEditor  v-model="description_ru"/>
-                                </client-only> -->
-                                <textarea name="" id="" rows="10" v-model="description_ru" class="w-full"></textarea>
+                                </client-only>
+                                <!-- <textarea name="" id="" rows="10" v-model="description_ru" class="w-full"></textarea> -->
                                 <p class="text-red-600 absolute">{{errors[0]}}</p>
                             </ValidationProvider>
                         </div>
@@ -81,23 +81,22 @@ export default {
     },
     methods: {
         ...mapActions({
-         store:"api/store"
+        store:"api/store"
         }),
         async getArticles()
         {
-             let formdata = new FormData();
-             formdata.append('name_tj',this.name_tj);
-             formdata.append('name_ru',this.name_ru);
-             formdata.append('photo',this.photo);
-             formdata.append('description_tj',this.description_tj);
-             formdata.append('description_ru',this.description_ru);
-            let payload = {
-                text:"Статья добавлено!",
-                request:"/articles",
-                form:formdata
-            }
-           await this.store(payload);
-
+            let formdata = new FormData();
+            formdata.append('name_tj',this.name_tj);
+            formdata.append('name_ru',this.name_ru);
+            formdata.append('photo',this.photo);
+            formdata.append('description_tj',this.description_tj);
+            formdata.append('description_ru',this.description_ru);
+        let payload = {
+            text:"Статья добавлено!",
+            request:"/articles",
+            form:formdata
+        }
+        await this.store(payload);
         },
     },
     watch:{

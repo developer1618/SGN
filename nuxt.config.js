@@ -84,6 +84,7 @@ export default {
       login: "/login",
       logout: "/login",
       home: "/admin/",
+      show: "/show/tj/"
     },
   },
   router: {
