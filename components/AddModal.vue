@@ -58,6 +58,7 @@ export default{
         }
       }
       this.store(payload);
+      location.reload();
     },
   },
   computed:{

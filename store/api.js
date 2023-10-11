@@ -56,7 +56,7 @@ data:[],
           'Content-Type':'application/json',
         }
        }).then(() => {
-              window.location.reload();
+              // window.location.reload();
          commit("SET_TOAST",payload.text);
          setTimeout(() =>{
           commit("UN_TOAST");

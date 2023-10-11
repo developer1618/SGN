@@ -26,14 +26,16 @@
                         <div class="col-span-1">
                             <ValidationProvider rules="required" v-slot="{ errors }">
                                 <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Описание на таджикском<span class="text-red-600">*</span></label>
-                                <textarea id="message" v-model="description_tj" rows="8" class="block p-2.5 w-full text-sm text-[#4D5D7D] bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  placeholder-gray-400 text-white" placeholder="Введите описание..."></textarea>
+                                <!-- <textarea id="message" v-model="description_tj" rows="8" class="block p-2.5 w-full text-sm text-[#4D5D7D] bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  placeholder-gray-400 text-white" placeholder="Введите описание..."></textarea> -->
+                                <VueEditor  v-model="description_tj"/>
                                 <p class="text-red-600 absolute">{{errors[0]}}</p>
                             </ValidationProvider>
                         </div>
                         <div class="col-span-1">
                             <ValidationProvider rules="required" v-slot="{ errors }">
                                 <label for="helper-text" class="block mb-2 text-sm font-medium text-[#4D5D7D]">Описание на русском<span class="text-red-600">*</span></label>
-                                <textarea id="message" v-model="description_ru" rows="8" class="block p-2.5 w-full text-sm text-[#4D5D7D] bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  placeholder-gray-400 text-white" placeholder="Введите описание..."></textarea>
+                                <!-- <textarea id="message" v-model="description_ru" rows="8" class="block p-2.5 w-full text-sm text-[#4D5D7D] bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  placeholder-gray-400 text-white" placeholder="Введите описание..."></textarea> -->
+                                <VueEditor  v-model="description_ru"/>
                                 <p class="text-red-600 absolute">{{errors[0]}}</p>
                             </ValidationProvider>
                         </div>
@@ -112,3 +114,9 @@ export default {
     },
 }
 </script>
+<style>
+.ql-toolbar.ql-snow+.ql-container.ql-snow {
+        border-radius: 0 0 10px 10px;
+        background-color: #fff;
+    }
+</style>
