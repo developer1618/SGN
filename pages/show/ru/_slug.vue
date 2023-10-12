@@ -5,10 +5,10 @@
             display: none;
         }
         </style>
-        <div class="flex justify-center py-4 col-span-12 m-auto">
+        <!-- <div class="flex justify-center py-4 col-span-12 m-auto">
             <img :src="photo" alt="Photo">
-        </div>
-        <div v-html="description_ru">
+        </div> -->
+        <div class="py-2 text-justify" v-html="description_ru">
 
         </div>
     </div>

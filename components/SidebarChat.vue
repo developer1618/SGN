@@ -80,7 +80,7 @@ export default {
       logout: {
         title: "Выход",
         url: "/",
-        icon: "/img/Vector7.svg"
+        icon: "/img/vector7.svg"
       },
     }
   },

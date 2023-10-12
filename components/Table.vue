@@ -20,14 +20,14 @@
               <div class="flex items-center"> 
                 <!-- <div class="ml-1 flex justify-between"> -->
                   <div class="text-sm leading-5 font-medium text-gray-900" >
-                  <p class="table-text max-w-4xl">{{key === 'created_at' ?  $moment(title[key]).format('DD/MM/YYYY') : title[key]}}</p>
+                    <p class="table-text max-w-4xl">{{ key === 'created_at' ? $moment(title[key]).format('DD/MM/YYYY') : stripHtml(title[key]) }}</p>
                   <!-- </div> -->
                 </div>
               </div>
             </td>
             <td class="flex justify-end px-6 py-4 whitespace-no-wrap text-right text-sm leading-5 font-medium">
-              <nuxt-link v-if="isIcon" :to="`${$route.path}${path}/${title.id}`" class="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline flex"><img src="/img/edit.svg" alt="Edit" class="pr-5"></nuxt-link>
-              <div v-if="isIcon"  class="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline flex cursor-pointer" @click="set_modal(true),id = title.id"><img src="/img/delete.svg" alt="Delete"></div>
+              <nuxt-link v-if="isIcon" :to="`${$route.path}${path}/${title.id}`" class="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline flex"><img src="/img/edit.svg" alt="Edit" class="pr-5 max-w-xl:w-16"></nuxt-link>
+              <div v-if="isIcon"  class="text-indigo-600 hover:text-indigo-900 focus:outline-none focus:underline flex cursor-pointer" @click="set_modal(true),id = title.id"><img src="/img/delete.svg" alt="Delete" class="max-w-xl:w-8"></div>
             </td>
           </tr>
         </tbody>
@@ -52,6 +52,11 @@ export default {
       }
     },
   methods: {
+      stripHtml(html) {
+        const tmp = document.createElement("div");
+        tmp.innerHTML = html;
+        return tmp.textContent || tmp.innerText || "";
+      },
     ...mapMutations({
       set_modal:"api/SET_MODAL"
     }),
