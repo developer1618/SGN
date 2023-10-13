@@ -6,7 +6,7 @@
             <div class="whitespace-nowrap">
                 <h2 class="text-[28px] text-[#1F2328] font-semibold mb-5 mt-10 mx-4">Сообщения</h2>
                 <div v-for="(discussion, index) in discussions" :key="index" @click="getSingleDiscussion(discussion)">
-                    <p class="bg-[#F8F8FB] p-4 mx-4 mb-4 rounded-lg hover:bg-[#E5E7EC] cursor-pointer whitespace-nowrap flex justify-between items-center text-sm text-[#1F2328] font-medium">{{discussion.name_ru}}</p>
+                    <p class="bg-[#F8F8FB] p-4 mx-4 mb-4 rounded-lg hover:bg-[#E5E7EC] cursor-pointer whitespace-nowrap flex justify-between items-center active:bg-gray-300 text-sm text-[#1F2328] font-medium active:text-white active">{{discussion.name_ru}}</p>
                     <!-- <span class="bg-[#727ABE] rounded-full text-white px-[10px] py-[3px] mx-2">1</span> -->
                 </div>
             </div>
@@ -78,6 +78,7 @@ export default{
             chats:[],
             body:"",
             discussionChat:[],
+            discussionPosts:[],
             discussion_id:null,
             id:null,
         }
@@ -111,6 +112,7 @@ export default{
             if (!this.body.trim()) {
                     return; // Input is empty, do not send the request
                 }
+                
             await this.$axios.post(`/discussionPost`,{
                 user_id: this.$auth.user.id,
                 discussion_id: this.discussion_id,

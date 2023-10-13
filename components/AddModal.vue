@@ -58,7 +58,7 @@ export default{
         }
       }
       this.store(payload);
-      location.reload();
+      location.reload('/discussions');
     },
   },
   computed:{

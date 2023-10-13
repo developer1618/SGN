@@ -3,7 +3,7 @@
         <div class="messages w-96 bg-white overflow-y-auto">
             <h2 class="text-[28px] text-[#1F2328] font-semibold mb-5 mt-10 mx-4">Сообщения</h2>
             <div v-for="user in groups" @click="getChat(user.id)">
-                <p class="bg-[#F8F8FB] p-4 mx-4 mb-4 rounded-lg hover:bg-[#E5E7EC] cursor-pointer whitespace-nowrap flex justify-between items-center active:bg-gray-300 text-sm text-[#1F2328] font-medium active:text-white">{{user.user.name_ru}} {{user.user.lastname_ru}} <span v-if="user.user2_read === 1" class="bg-[#727ABE] rounded-full text-white px-[10px] py-[3px] mx-2">1</span></p>
+                <p class="bg-[#F8F8FB] p-4 mx-4 mb-4 rounded-lg hover:bg-[#E5E7EC] cursor-pointer whitespace-nowrap flex justify-between items-center active:bg-gray-300 text-sm text-[#1F2328] font-medium active:text-white active">{{user.user.name_ru}} {{user.user.lastname_ru}} <span v-if="user.user2_read === 1" class="bg-[#727ABE] rounded-full text-white px-[10px] py-[3px] mx-2">1</span></p>
             </div>
         </div>
         <div class="consultations w-full relative justify-center items-end pb-7 mt-20">
@@ -14,7 +14,7 @@
                         <div class="bg-[#727ABE] text-white p-2 p-2 text-center rounded-[16px] max-w-md">{{chat.body}}</div>
                     </div>
                     <div class="user-messages flex justify-start pb-6"  v-else>
-                        <p class="bg-[#ebebeb] text-[#1F2328] px-3 py-2.5 text-center rounded-[16px] max-w-md">{{chat.body}}</p>
+                        <div class="bg-[#ebebeb] text-[#1F2328] px-3 py-2.5 text-center rounded-[16px] max-w-md">{{chat.body}} <img class="max-w-md" :src="'http://api.sgn.colibri.tj/storage/' + chat.attachment" alt=""></div>
                     </div>
                 </div>
             </div>
@@ -127,3 +127,30 @@ export default{
     // }
 }
 </script>
+<style>
+  svg {
+    fill: #B3B9C9 !important;
+    width: 24px !important;
+    height: 28px !important;
+  }
+
+  .active a svg {
+    fill: #727ABE !important;
+  }
+
+  a.nuxt-link-active {
+    color: #727ABE;
+  }
+
+  a.nuxt-link-active svg {
+    fill: #727ABE !important;
+  }
+
+  a:hover {
+    color: #727ABE;
+  }
+
+  a:hover svg {
+    fill: #727ABE !important;
+  }
+</style>
